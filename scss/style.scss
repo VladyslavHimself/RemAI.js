@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: #353535;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin:0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.phaseForm {
+    width: 600px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .header {
+        font-size: 26px;
+        color: #fff;
+    }
+
+
+}
+
+input {
+    outline: none;
+}
+
+.inputField {
+    &--item input {
+        width: 294px;
+        height: 26px;
+        margin-bottom: 10px;
+        background-color: #fff;
+        padding-left: 10px;
+        border: none;
+        transition: .3s ease;
+
+        &:focus {
+            color: red; 
+            
+        }
+    }
+
+    
+
+}
+
+
+.submit {
+    &--btn input {
+
+        cursor: pointer;
+
+        width: 250px;
+        height: 50px;
+        background-color: #ff4a4a;
+        border: none;
+        transition: .3s ease;
+
+        color: #fff;
+
+        // pseudo
+
+        &:hover {
+            background-color: #c43434;
+        }
+
+        &:active {
+            background-color: #972121;
+            transition: .1s ease !important;
+        }
+    }
+
+}
+
+.close {
+    position: absolute;
+    top: 5%;
+    left: 93%;
+}
+
+svg {
+    cursor: pointer;
+    &:hover {
+        path {
+            fill: #ff4a4a;
+        }
+    }
+}

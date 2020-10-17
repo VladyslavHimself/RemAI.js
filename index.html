@@ -4,11 +4,40 @@
     <meta charset="UTF-8">
     <title>Hello World!</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <h1>Hello World!</h1>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chrome <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+<body data-barba="wrapper">
+    <div class="close">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.72727 0L30 27.2727L27.2727 30L0 2.72727L2.72727 0Z" fill="white"/>
+            <path d="M30 2.72727L2.72728 30L5.58803e-06 27.2727L27.2727 4.67526e-07L30 2.72727Z" fill="white"/>
+            </svg>            
+    </div>
+    <div class="wrapper" data-barba="container" data-barba-namespace="home">
+        <div class="phaseForm">
+            <div class="header">
+                <h1>RemAI</h1>
+            </div>
+            <div class="loginForm">
+                <div class="inputField">
+                    <div class="inputField--item username">
+                        <input type="text" name="username" placeholder="Username">
+                    </div>
+                    <div class="inputField--item paswd">
+                        <input type="password" name="password" id="" placeholder="Password">
+                    </div>
+                </div>
+            </div>
+            <div class="submit">
+                <div class="submit--btn">
+                    <input type="button" value="LogIn">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="js/controller.js"></script>
 </body>
 </html>
