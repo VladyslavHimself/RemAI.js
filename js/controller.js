@@ -15,10 +15,6 @@ closeBtn.addEventListener('click',() => {
   window.close();
 });
 
-
-
-
-
 function auth() {
    if (User.username == usernameData.value && User.password == paswdData.value) {
       return true;
@@ -33,10 +29,31 @@ loginBtn.addEventListener('click', () => {
    let isLoggedIn = auth();
 
    if(!isLoggedIn) {
-      // if not logged
+      // if not logged in
    } else {
       // if logged
+         document.querySelector('.phaseForm').remove();
+         document.querySelector('.dashForm').style.display = 'flex';
    }
 });
+
+
+// switch 
+
+const martengeilForm = document.querySelector('#martengeil'),
+      automationForm = document.querySelector('#automation');
+
+martengeilForm.addEventListener('click', () => {
+   document.querySelector('.dashForm').remove();
+   document.querySelector('.martengeilForm').style.display = 'flex';
+});
+
+automationForm.addEventListener('click', () => {
+   document.querySelector('.dashForm').remove();
+   document.querySelector('.wrapper').innerHTML = 'Not realized yet';
+   document.querySelector('.wrapper').style.color = '#fff';
+});
+
+// calculate by Martengeil
 
 

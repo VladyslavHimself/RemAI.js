@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>RemAI</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
@@ -35,9 +35,65 @@
                 </div>
             </div>
         </div>
+
+        <div class="dashForm">
+            <div class="menu">
+                <div class="menu--card" id='martengeil'>
+                    <h2>Calculate by Martengeil</h2>
+                </div>
+
+                <div class="menu--card" id='automation'>
+                    <h2>Use RemAI automation</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="martengeilForm">
+
+            <div class="df">
+                <div class="dataField">
+                    <div class="dataRow">
+                        <div class="dataRow--text">
+                            <p>Enter your amount of Bux:</p>
+                        </div>
+                        <div class="dataRow--input">
+                            <input type="text" name="amount" id="" placeholder="1000">
+                        </div>
+                    </div>
+    
+                    <div class="dataRow">
+                        <div class="dataRow--text">
+                            <p>Enter your bet:</p>
+                        </div>
+                        <div class="dataRow--input">
+                            <input type="text" name="amount" id="" placeholder="10">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resultField">
+                    <div class="resultField--header">
+                        <p>You can bet:</p>
+                    </div>
+                    <div class="resultField--number">
+                        <p>0</p>
+                    </div>
+                    <div class="resultField--footer">
+                        <p>times</p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="submit">
+                <div class="submit--btn">
+                    <input type="button" value="Show bet logs">
+                </div>
+        </div>
+
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="https://unpkg.com/@barba/core"></script>
+        
+
     <script src="js/controller.js"></script>
 </body>
 </html>

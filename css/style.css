@@ -73,3 +73,96 @@ svg {
 svg:hover path {
   fill: #ff4a4a;
 }
+
+.dashForm {
+  width: 523px;
+  display: none;
+}
+.dashForm .menu {
+  width: 100%;
+  display: inherit;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashForm .menu--card {
+  cursor: pointer;
+  width: 250px;
+  height: 170px;
+  background-color: #ff4a4a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: white;
+}
+.dashForm .menu--card:hover {
+  background-color: #c43434;
+}
+.dashForm .menu--card:active {
+  background-color: #972121;
+  transition: 0.1s ease !important;
+}
+
+.martengeilForm {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #fff;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 670px;
+  height: 300px;
+}
+.martengeilForm .df {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dataField {
+  width: 50%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.dataField .dataRow {
+  width: 100%;
+}
+.dataField .dataRow--text {
+  font-size: 18px;
+}
+.dataField .dataRow--input input {
+  width: 294px;
+  height: 26px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  padding-left: 10px;
+  border: none;
+}
+
+.resultField {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 50px;
+}
+.resultField--number {
+  font-size: 86px;
+}
+.resultField--number p {
+  color: #ff4a4a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+}
