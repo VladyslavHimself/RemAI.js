@@ -56,4 +56,33 @@ automationForm.addEventListener('click', () => {
 
 // calculate by Martengeil
 
+const minBet = 10;
 
+let bux = document.querySelector('#buxInput'),
+    bet = document.querySelector('#betInput'),
+    btn = document.querySelector('#calculate'),
+    resField = document.querySelector('.resultField--number p').textContent,
+    counter = 0;
+
+
+function calculateTries() {
+   let buxValue = bux.value,
+       betValue = bet.value;
+       
+
+   while (buxValue > minBet) {
+   
+      buxValue = buxValue - (betValue * 2);
+      betValue *= 2;
+
+      counter++;
+
+   }
+   console.log(counter);
+   document.querySelector('.resultField--number p').textContent = `${counter}`;
+
+}
+
+btn.addEventListener('click', () => {
+   calculateTries();
+});
