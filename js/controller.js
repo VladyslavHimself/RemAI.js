@@ -64,6 +64,26 @@ automationForm.addEventListener('click', () => {
 
 // calculate by Martengeil
 
+
+// change result
+
+function showResult(result) {
+   document.querySelector('.resultField--number p').textContent = `${--result}`;
+}
+
+function doMartengeilCalculation(bux, bet) {
+   
+   while (bux > minBet) {
+   
+      bux = bux - (bet * 2);
+      bet *= 2;
+      counter++;
+
+   }
+
+   return counter;
+}
+
 const minBet = 10;
 
 let bux = document.querySelector('#buxInput'),
@@ -75,21 +95,15 @@ let bux = document.querySelector('#buxInput'),
 
 function calculateTries() {
    
+   // declare vars
    let buxValue = bux.value,
-       betValue = bet.value;
+       betValue = bet.value,
+       counter;
        
+   // while buxes bigger than minimal bet...
+   counter = doMartengeilCalculation(buxValue, betValue);
 
-   while (buxValue > minBet) {
-   
-      buxValue = buxValue - (betValue * 2);
-      betValue *= 2;
-
-      counter++;
-
-   }
-   console.log(counter);
-   document.querySelector('.resultField--number p').textContent = `${--counter}`;
-
+   showResult(counter);
 }
 
 btn.addEventListener('click', () => {
