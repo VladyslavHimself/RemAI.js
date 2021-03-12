@@ -1,12 +1,14 @@
+
+// NOTE declare UI elements
 const closeBtn = document.querySelector('.close'),
       loginBtn = document.querySelector('.submit--btn'),
       usernameData = document.querySelector('.username input'),
       paswdData = document.querySelector('.paswd input');
 
+// hardCode user info
 const User = {
    username: 'root',
    password: 'root',
-
 };
 
 
@@ -15,6 +17,8 @@ closeBtn.addEventListener('click',() => {
   window.close();
 });
 
+
+// NOTE {F} auth
 function auth() {
    if (User.username == usernameData.value && User.password == paswdData.value) {
       return true;
@@ -23,6 +27,11 @@ function auth() {
    }
 }
 
+// NOTE {F} Change Section
+function changeSection(from, to) {
+   document.querySelector(from).remove();
+   document.querySelector(to).style.display = 'flex';
+}
 
 loginBtn.addEventListener('click', () => {
 
@@ -32,8 +41,7 @@ loginBtn.addEventListener('click', () => {
       // if not logged in
    } else {
       // if logged
-         document.querySelector('.phaseForm').remove();
-         document.querySelector('.dashForm').style.display = 'flex';
+      changeSection('.phaseForm', '.dashForm');
    }
 });
 
@@ -44,9 +52,9 @@ const martengeilForm = document.querySelector('#martengeil'),
       automationForm = document.querySelector('#automation');
 
 martengeilForm.addEventListener('click', () => {
-   document.querySelector('.dashForm').remove();
-   document.querySelector('.martengeilForm').style.display = 'flex';
+   changeSection('.dashForm', '.martengeilForm');
 });
+
 
 automationForm.addEventListener('click', () => {
    document.querySelector('.dashForm').remove();
@@ -66,6 +74,7 @@ let bux = document.querySelector('#buxInput'),
 
 
 function calculateTries() {
+   
    let buxValue = bux.value,
        betValue = bet.value;
        
@@ -79,7 +88,7 @@ function calculateTries() {
 
    }
    console.log(counter);
-   document.querySelector('.resultField--number p').textContent = `${counter}`;
+   document.querySelector('.resultField--number p').textContent = `${--counter}`;
 
 }
 
