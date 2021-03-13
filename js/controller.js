@@ -98,10 +98,10 @@ function calculateTries() {
    // declare vars
    let buxValue = bux.value,
        betValue = bet.value,
-       counter;
+       result;
        
    // while buxes bigger than minimal bet...
-   counter = doMartengeilCalculation(buxValue, betValue);
+   result = doMartengeilCalculation(buxValue, betValue);
 
    showResult(counter);
 }
